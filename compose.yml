@@ -1,0 +1,16 @@
+services:
+  code-server:
+    container_name: code-server
+    image: lscr.io/linuxserver/code-server:latest
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Sao_Paulo
+      - PASSWORD=password
+      - SUDO_PASSWORD=sudopassword
+      - DEFAULT_WORKSPACE=/config/workspace
+    ports:
+      - 8443:8443
+    volumes:
+      - ./code-server:/config
+    restart: unless-stopped
