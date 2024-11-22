@@ -1,12 +1,12 @@
-# Oak 🌳
+# Coder 👨‍🚀
 Setup on Ubuntu (w/Docker, Docker Compose)
 
-## How to use`
+### How to use
 ```bash
-$ git clone https://github.com/omaucf/oak.git
+$ git clone https://github.com/omaucf/coder.git
 ```
 
-1. **Config** `setting.sh`
+1. **Config** `config/setting.sh`
 ````diff
 environment:
 -   GIT_NAME=""
@@ -15,7 +15,7 @@ environment:
 +   GIT_EMAIL="omaucf@pm.me"
 ````
 
-2. **Docker** `docker-compose.yml`
+2. **Compose** `compose.yml`
 ````diff
 environment:
 -   - PASSWORD=password
@@ -26,10 +26,10 @@ environment:
 
 3. **Build**
 ```bash
-$ docker compose up --build -d
+$ docker compose up -d --build
 ```
 
-4. **Permission**
+4. **Run**
 ```bash
 $ chmod 755 /config/setting.sh
 $ sh /config/setting.sh

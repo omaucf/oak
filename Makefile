@@ -4,7 +4,7 @@ COMPOSE ?= compose.yml
 docker.up:
 	@docker compose -f $(COMPOSE) up -d $(filter-out $@,$(MAKECMDGOALS)) $(MAKEFLAGS)
 docker.build:
-	@docker compose -f $(COMPOSE) up --build -d
+	@docker compose -f $(COMPOSE) up -d --build
 docker.stop:
 	@docker compose -f $(COMPOSE) stop
 docker.down:

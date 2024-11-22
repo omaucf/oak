@@ -1,6 +1,6 @@
 services:
-  code-server:
-    container_name: code-server
+  coder:
+    container_name: coder
     image: lscr.io/linuxserver/code-server:latest
     environment:
       - PUID=1000
@@ -12,5 +12,6 @@ services:
     ports:
       - 8443:8443
     volumes:
-      - ./code-server:/config
+      - ./config:/config
+      - /var/run/docker.sock:/var/run/docker.sock
     restart: unless-stopped
