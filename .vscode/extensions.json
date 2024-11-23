@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    // DEVELOPMENT
+    "esbenp.prettier-vscode",
+    // THEMING
+    "akamud.vscode-theme-onedark",
+    "pkief.material-icon-theme",
+    // UTIL
+    "jellydn.toggle-excluded-files"
+  ]
+}
